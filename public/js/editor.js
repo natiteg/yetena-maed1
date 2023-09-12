@@ -74,7 +74,7 @@ publishBtn.addEventListener('click', () => {
         let date = new Date(); // for published at info
 
          // Define an empty bannerPath initially
-       //  let bannerPath = '';
+         let bannerPath = '';
 
          // Check if a banner image has been uploaded
           if (bannerImage.files.length > 0) {
