@@ -18,22 +18,6 @@ uploadInput.addEventListener('change', () => {
 })
 
 
-// // Get the query parameter from the URL
-// const urlParams = new URLSearchParams(window.location.search);
-// const specificUserID = 'Aa1TmadYfIdNz37Rtko7uCelkRF3'; // Replace with the actual UID of the specific user
-
-// // Check if the user parameter matches the specific user's UID
-// if (urlParams.get('user') === specificUserID) {
-//   // Allow access to the editor page for the specific user
-//   location.replace('/editor');
-// } else {
-//   // Show an alert and prevent access for other users
-//   alert('You do not have permission to access this page.');
-//   // Redirect or take appropriate action to handle unauthorized access
-//   // For example, you can redirect to a different page.
-//  location.replace('/');
-// }
-
 
 const uploadImage = (uploadFile, uploadType) => {
     const [file] = uploadFile.files;
@@ -90,12 +74,12 @@ publishBtn.addEventListener('click', () => {
         let date = new Date(); // for published at info
 
          // Define an empty bannerPath initially
-        //  let bannerPath = '';
+       //  let bannerPath = '';
 
          // Check if a banner image has been uploaded
-        //  if (bannerImage.files.length > 0) {
-        //     bannerPath = `${location.origin}/${bannerPath}`; // Corrected
-        // }
+          if (bannerImage.files.length > 0) {
+             bannerPath = `${location.origin}/${bannerPath}`; // Corrected
+        }
 
         //access firstore with db variable;
         db.collection("blogs").doc(docName).set({
